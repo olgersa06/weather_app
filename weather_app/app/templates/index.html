@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Station</title>
+</head>
+<body>
+    <h1>Latest Weather Data</h1>
+    <table border="1">
+        <tr><th>City</th><th>Temperature</th><th>Timestamp</th></tr>
+        {% for city, temp, time in data %}
+        <tr>
+            <td>{{ city }}</td>
+            <td>{{ temp }}°C</td>
+            <td>{{ time }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
